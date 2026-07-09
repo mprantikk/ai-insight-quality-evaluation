@@ -6,41 +6,58 @@
   </a>
 </p>
 
-**Author:** Md Masud Parvej (Independent Researcher)[span_0](start_span)[span_0](end_span)  
-**Contact:** [mprantikk@gmail.com](mailto:mprantikk@gmail.com)[span_1](start_span)[span_1](end_span)
+**Author:** Md. Masud Parvej (Independent Researcher)  
+**Contact:** [mprantikk@gmail.com](mailto:mprantikk@gmail.com)
 
 ---
 
 ## 📌 Project Overview
-The integration of artificial intelligence into business intelligence (BI) platforms has introduced augmented analytics: the automated detection, generation, and narration of data-driven insights with minimal human intervention[span_2](start_span)[span_2](end_span). While this promises scalable decision support, organizations lack systematic criteria to evaluate whether these algorithmically generated insights are statistically sound, contextually relevant, non-trivial, and actionable, as opposed to spurious, redundant, or misleading noise[span_3](start_span)[span_3](end_span).
 
-This project houses the formal manuscript for the **Insight Quality Evaluation (IQE) framework**[span_4](start_span)[span_4](end_span). The framework bridges data mining interestingness research, information systems success metrics, and human-computer cognitive analytics to construct an evaluative lens for auditing AI-generated insights before they reach strategic dashboards[span_5](start_span)[span_5](end_span).
+The integration of artificial intelligence into business intelligence (BI) platforms has introduced **augmented analytics**: the automated detection, generation, and narration of data-driven insights with minimal human intervention. While this promises scalable decision support, organizations still lack systematic criteria for evaluating whether these algorithmically generated insights are statistically sound, contextually relevant, genuinely novel, and actionable, rather than being spurious, redundant, or misleading.
+
+This repository contains the formal manuscript for the **Insight Quality Evaluation (IQE) Framework**. The framework integrates research on data mining interestingness, information systems success, and human-centered analytics to provide a structured approach for evaluating AI-generated insights before they are presented on strategic dashboards.
 
 ---
 
-## 💡 Core Evaluative Dimensions
-The IQE framework organizes insight quality metrics across four non-collapsible pillars[span_6](start_span)[span_6](end_span):
+## 💡 Core Evaluation Dimensions
 
-1. **Statistical Validity:** Measures if a generated narrative reflects a genuine, robust pattern or if it suffers from false-positive inflation due to exhaustive automated data mining (multiple-comparison/garden of forking paths errors)[span_7](start_span)[span_7](end_span).
-2. **Contextual Relevance:** Evaluates if the insight bears on active decision spaces, operational targets, or tactical parameters salient to the end business user[span_8](start_span)[span_8](end_span).
-3. **Novelty:** Measures if the insight adds information beyond what the business user, domain intuition, or standard enterprise knowledge baseline already anticipates[span_9](start_span)[span_9](end_span).
-4. **Actionability:** Evaluates if accepting the automated observation maps to a clear, feasible operational response or transactional pivot[span_10](start_span)[span_10](end_span).
+The IQE Framework organizes insight quality across four complementary dimensions:
+
+1. **Statistical Validity**  
+   Assesses whether a generated insight reflects a genuine and statistically robust pattern or results from false-positive inflation caused by exhaustive automated data mining (e.g., multiple comparisons or the "garden of forking paths" problem).
+
+2. **Contextual Relevance**  
+   Evaluates whether the insight aligns with current business objectives, operational priorities, and decision-making needs.
+
+3. **Novelty**  
+   Measures whether the insight contributes information beyond existing domain knowledge, business intuition, or previously established organizational understanding.
+
+4. **Actionability**  
+   Determines whether the insight naturally translates into a clear, practical, and feasible business action or operational decision.
 
 ---
 
 ## 🔬 Proposed Research Methodology
-The accompanying paper details a rigorous mixed-methods verification architecture to empirically evaluate and validate the framework[span_11](start_span)[span_11](end_span):
-* **Phase 1 (Computational Evaluation):** Subspace-search or association-rule insight mining over public benchmarks (UCI, Kaggle, World Bank, WHO, OECD) to compute baseline statistical validity and surprise indexes[span_12](start_span)[span_12](end_span).
-* **Phase 2 (Expert Panel Validation):** Structured professional panel grading ($n=15\text{--}20$ per domain) evaluating context relevance, implied actionability, and NLG (Natural Language Generation) narrative faithfulness against blind statistical summaries[span_13](start_span)[span_13](end_span).
-* **Phase 3 (Moderator Testing):** Multi-group comparison testing to measure structural interactions involving **Task Complexity** and **Organizational Data Maturity**[span_14](start_span)[span_14](end_span).
+
+The accompanying manuscript proposes a rigorous mixed-methods validation strategy:
+
+- **Phase 1 – Computational Evaluation:** Apply subspace search and association rule mining techniques to public benchmark datasets (UCI, Kaggle, World Bank, WHO, and OECD) to compute measures of statistical validity and surprise.
+
+- **Phase 2 – Expert Panel Validation:** Conduct structured evaluations with domain experts (*n* = 15–20 per domain) to assess contextual relevance, actionability, and the faithfulness of Natural Language Generation (NLG) narratives against blinded statistical summaries.
+
+- **Phase 3 – Moderator Analysis:** Perform multi-group analyses to examine how **Task Complexity** and **Organizational Data Maturity** moderate the relationships among the framework's quality dimensions.
 
 ---
 
-## 📄 Repository Directory Structure
-* `Insight_Quality_Evaluation_Framework_Formatted.pdf` - Fully styled, production-ready academic layout copy[span_15](start_span)[span_15](end_span).
-* `Insight_Quality_Evaluation_Framework_Manuscript.docx` - Raw working manuscript document[span_16](start_span)[span_16](end_span).
+## 📄 Repository Structure
+
+- `Insight_Quality_Evaluation_Framework_Formatted.pdf` – Publication-ready formatted manuscript.
+- `Insight_Quality_Evaluation_Framework_Manuscript.docx` – Editable working manuscript.
 
 ---
 
-## 👥 Contribution & Collaboration
-This research represents a conceptual foundation open for collaborative testing[span_17](start_span)[span_17](end_span). If you are interested in constructing automated scoring layers or building testing hooks to validate this architecture using open-source packages (Python/R)[span_18](start_span)[span_18](end_span), please feel free to open an issue or connect via email!
+## 👥 Collaboration
+
+This research provides a conceptual foundation for evaluating AI-generated insights and is intended to encourage future empirical validation and collaboration.
+
+If you are interested in developing automated scoring methods, implementing evaluation pipelines, or validating the framework using open-source tools in Python or R, feel free to open an issue or get in touch via email.

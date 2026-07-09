@@ -1,7 +1,7 @@
 # Beyond the Dashboard: A Conceptual Framework for Evaluating Insight Quality in AI-Augmented BI Systems
 
 <p align="left">
-  <a href="https://github.com/mprantikk/ai-insight-quality-evaluation/blob/main/Insight_Quality_Evaluation_Framework_Formatted.pdf">
+  <a href="https://github.com/mprantikk/ai-insight-quality-evaluation/blob/main/research_paper.pdf">
     <img src="https://img.shields.io/badge/Read%20Full%20Paper-2E7D32?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Read PDF Online" />
   </a>
 </p>

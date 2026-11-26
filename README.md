@@ -1,5 +1,8 @@
 # Beyond the Dashboard: A Conceptual Framework for Evaluating Insight Quality in AI-Augmented BI Systems
 
+[![CI](https://github.com/mprantikk/ai-insight-quality-evaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/mprantikk/ai-insight-quality-evaluation/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+
 <p align="left">
   <a href="https://github.com/mprantikk/ai-insight-quality-evaluation/blob/main/Insight_Quality_Evaluation_Framework_Formatted.pdf">
     <img src="https://img.shields.io/badge/Read%20Full%20Paper-2E7D32?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Read PDF Online" />
@@ -45,10 +48,47 @@ The accompanying manuscript proposes a rigorous mixed-methods validation strateg
 
 ---
 
+## 🧪 Reference Implementation
+
+The `iqe/` package turns the framework into code you can run on a batch of AI-generated insights. It scores each insight on all four dimensions and, following the paper's non-collapsibility principle, **does not merge them into one "trust score"**. Instead it names the weakest dimension.
+
+| Dimension | How it is measured |
+|---|---|
+| Statistical validity | Benjamini–Hochberg FDR control across the whole candidate pool, plus a minimum effect size |
+| Novelty | TF-IDF cosine distance from a "known pattern baseline" (prior reports, documented seasonality) |
+| Contextual relevance | Expert panel Likert ratings, accepted only if ICC(2,1) ≥ 0.70 |
+| Actionability | Expert panel Likert ratings, accepted only if ICC(2,1) ≥ 0.70 |
+
+```bash
+pip install -r requirements.txt
+python evaluate_insights.py
+```
+
+```
+Panel reliability (ICC(2,1), threshold 0.70):
+  relevance      0.85  reliable
+  actionability  0.91  reliable
+
+insight_id  validity  novelty  relevance  actionability  verdict
+        I1     0.966    0.929      0.917          0.917  surface on dashboard
+        I2     0.997    0.394      0.417          0.167  hold: weak on novelty, relevance, actionability
+        I4     0.000    1.000      0.083          0.000  reject: not statistically supported
+        ...
+```
+
+I2 ("revenue is higher in December") is statistically rock-solid but already known and not useful, which is exactly the kind of insight a single score would wrongly rank first. The example data in `examples/` is synthetic.
+
+The ICC implementation is tested against the published Shrout & Fleiss (1979) example. The novelty measure is lexical by design (no external model, fully reproducible); swapping in sentence embeddings is a natural extension.
+
+---
+
 ## 📄 Repository Structure
 
-- `Insight_Quality_Evaluation_Framework_Formatted.pdf` – Publication-ready formatted manuscript.
-- `Insight_Quality_Evaluation_Framework_Manuscript.docx` – Editable working manuscript.
+- `Insight_Quality_Evaluation_Framework_Formatted.pdf`: the manuscript
+- `iqe/`: reference implementation (validity, novelty, panel reliability, profile)
+- `evaluate_insights.py`: command-line runner
+- `examples/`: synthetic insights, known-pattern baseline and panel ratings
+- `tests/`: pytest suite, run in CI on Python 3.10 and 3.12
 
 ---
 

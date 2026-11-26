@@ -1,0 +1,5 @@
+{
+  "_note": "Synthetic 1-5 Likert ratings from three expert raters per insight (rows follow insights.csv).",
+  "relevance": [[5, 5, 4], [3, 2, 3], [4, 4, 5], [1, 1, 2], [5, 4, 5], [2, 3, 2]],
+  "actionability": [[5, 4, 5], [2, 1, 2], [4, 5, 4], [1, 1, 1], [4, 4, 5], [1, 2, 1]]
+}

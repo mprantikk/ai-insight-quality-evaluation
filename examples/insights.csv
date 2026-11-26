@@ -1,0 +1,7 @@
+id,text,p_value,effect_size
+I1,Claim denials from one regional payer rose 34% after its new prior-authorization rule took effect in March,0.0004,0.71
+I2,Revenue is higher in December than in other months because of holiday demand,0.0001,0.90
+I3,Clinics that submit claims within 3 days of service are paid 9 days faster on average,0.0021,0.48
+I4,Patients born on a Tuesday have slightly higher average invoice values,0.0310,0.12
+I5,Denial rate for telehealth visits is 2.1x the rate for in-person visits on the same CPT codes,0.0009,0.62
+I6,Average days in AR changed between Q2 and Q3,0.0400,0.25
